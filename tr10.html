@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>BoutiqueDeVetementsEnLigne.com</title>
+        <script src="js/tr10.js"></script>
+    </head>
+    <body>
+        <header>
+            <strong>Bienvenue sur notre site ' BoutiqueDeVetementsEnLigne.com ' ! </strong><br><br><hr>
+        </header>
+        <section>
+            <form id="formCommandesEnLigne" action=# onSubmit='return ajouterAuPanier(this);'>
+                <fieldset>
+                    <legend>Commandez ici ! </legend>
+                    <label for="nomDeLaCommande">Insérez votre prénom et nom de famille ici ! </label>
+                    <input id="nomDeLaCommande" name="nom" type="text" required> <br>
+                    <label for="quelVetement">Quel vêtement ? </label>
+                    <select id="quelVetement" name="quel">
+                        <option value="pantalon" selected>Pantalon</option>
+                        <option value="tshirt">T-Shirt</option>
+                        <option value="pull">Pull</option>
+                        <option value="chaussure">Chaussure</option>
+                        <option value="chaussette">Chaussette</option>
+                        <option value="calecon">Caleçon</option>
+                        <option value="sweatshirt">Sweatshirt</option>
+                        <option value="chemise">Chemise</option>
+                        <option value="short">Short</option>
+                    </select><br>
+                    <label for="couleurVetement">Quelle couleur ? </label>
+                    <select id="couleurVetement" name="couleur">
+                        <option value="blanc">Blanc</option>
+                        <option value="noir">Noir</option>
+                        <option value="rouge">Rouge</option>
+                        <option value="vert">Vert</option>
+                        <option value="bleu">Bleu</option>
+                        <option value="jaune">Jaune</option>
+                        <option value="turquoise">Turquoise</option>
+                        <option value="rose">Rose</option>
+                        <option value="violet">Violet</option>
+                        <option value="marron">Marron</option>
+                        <option value="beige">Beige</option>
+                    </select><br>
+                    <label for="nombreVetement">Combien en voulez-vous ? </label>
+                    <input id="nombreVetement" name="nombre" type="number" min="1" step="1" required><br>
+                    <label for="typeDePaiement">Choisissez votre moyen de paiement. </label>
+                    <select id="typeDePaiement" name="paiement">
+                        <option value="bancontact">Bancontact</option>
+                        <option value="Maestro">Maestro</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="paysafecard">PaySafeCard</option>
+                    </select><br>
+                    <input type="submit" value="Ajouter au panier">
+                    <input type="reset" value="Effacer">
+                </fieldset>
+            </form>
+            <hr>
+            <div id="afficherLePanier">
+                <p>
+                    <button type="button" onclick="allerAuPanier();">Vers le panier</button></p>
+            </div>
+            <hr>
+            <div id="commander">
+                <p>
+                    <button type="button" onclick="commander();">Finaliser la commande</button></p>
+                <span id = recuFinal>
+                    <p><strong></strong></p>
+                </span>
+            </div>
+            <hr>
+        <footer>
+            Nous contacter : <br>
+            <br>
+            e-mail : contact@boutiquedevetementsenligne.com <br>
+            numéro : 0911.09.11.01 <br>
+            Twitter : @BoutiqueDeVetementsEnLigne <br>
+        </footer>
+    </body>
+</html>
